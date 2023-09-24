@@ -1,5 +1,7 @@
+import FeaturedJobs from "../featuredJobs/FeaturedJobs";
+
 const Jobs = () => {
-  return <div>Jobs</div>;
+  return <FeaturedJobs />;
 };
 
 export default Jobs;
