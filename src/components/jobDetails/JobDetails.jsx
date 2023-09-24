@@ -14,11 +14,12 @@ const JobDetails = () => {
 
   useEffect(() => {
     setAppliedIds(getJobApplication());
-  }, [appliedIds]);
+  }, []);
 
   const handleApply = () => {
     saveJobApplication(Number(id));
-    const exists = appliedIds.includes(Number(id));
+    setAppliedIds(getJobApplication());
+    const exists = appliedIds.find((appliedId) => appliedId === Number(id));
     if (exists) {
       toast.error("Already Applied", {
         position: "top-right",
